@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">TestProject</string>
+    <string name="content_provider">ContentProvider</string>
+    <string name="add_ContentProvider">增加</string>
+    <string name="del_ContentProvider">删除</string>
+    <string name="update_ContentProvider">修改</string>
+    <string name="query_ContentProvider">查询</string>
+    <string name="call_ContentProvider">Call</string>
+    <string name="encryptFile">加密文件</string>
+    <string name="decryptFile">解密文件</string>
+    <string name="dataBinding">DataBinding</string>
+    <string name="dataBinding_Name">Name</string>
+    <string name="dataBinding_LastName">LastName</string>
+    <string name="dataBinding_ImageDes">图片描述</string>
+    <string name="dataBinding_Add">加</string>
+    <string name="dataBinding_Sub">减</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Reset</string>
+    <string name="pause">Pause</string>
+    <string name="minus_sign">-</string>
+    <string name="plus_sign">+</string>
+    <string name="sets_format">Sets: %d/%d</string>
+    <string name="prefs_timePerWorkSet">SHARED_PREFS_TIMEPERWORKSET</string>
+    <string name="prefs_timePerRestSet">SHARED_PREFS_TIMEPERRESTSET</string>
+    <string name="prefs_numberOfSets">SHARED_PREFS_NUMBEROFSETS</string>
+
+    <string name="notification">Notification</string>
+    <string name="basic_notification">Basic Notification</string>
+    <string name="basic_notification_content">我是BigText，呵呵哈哈哈或呵呵哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或</string>
+    <string name="basic_channel_name">基础通知</string>
+    <string name="basic_channel_des">我是基础通知</string>
+    <string name="action_bt">Action Button</string>
+    <string name="reply_notification">Reply Notification</string>
+    <string name="reply_label">Reply</string>
+    <string name="progress_notification">ProgressBar Notification</string>
+    <string name="progress_channel_name">下载更新通知</string>
+    <string name="progress_channel_des">下载，更新你的应用</string>
+    <string name="urgent_notification">Urgent Notification</string>
+    <string name="expandable_notification">Expandable Notification</string>
+    <string name="expandable_channel_name">扩展通知</string>
+    <string name="expandable_channel_des">我是扩展通知通道</string>
+    <string name="expandable_text">
+        君不见黄河之水天上来，奔流到海不复回。
+        君不见高堂明镜悲白发，朝如青丝暮成雪。
+        人生得意须尽欢，莫使金樽空对月。
+        天生我材必有用，千金散尽还复来。
+        烹羊宰牛且为乐，会须一饮三百杯。
+        岑夫子，丹丘生，将进酒，杯莫停。
+        与君歌一曲，请君为我倾耳听。
+        钟鼓馔玉不足贵，但愿长醉不复醒。
+        古来圣贤皆寂寞，惟有饮者留其名。
+        陈王昔时宴平乐，斗酒十千恣欢谑。
+        主人何为言少钱，径须沽取对君酌。
+        五花马、千金裘，呼儿将出换美酒，与尔同销万古愁。
+    </string>
+    <string name="start_activity_notification">Start Activity Notification</string>
+    <string name="group_notification">Group Notification</string>
+    <string name="open_notification_settings">Open Notification Settings</string>
+    <string name="custom_notification">Custom Notification</string>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5Activity">
+
+    <Button
+        android:id="@+id/btBasicNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btReplyNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reply_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btBasicNotification" />
+
+    <Button
+        android:id="@+id/btProgressNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btReplyNotification" />
+
+    <Button
+        android:id="@+id/btUrgentNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/urgent_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btProgressNotification" />
+
+    <Button
+        android:id="@+id/btExpandableNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/expandable_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btUrgentNotification" />
+
+    <Button
+        android:id="@+id/btStartActivityNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_activity_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btExpandableNotification" />
+
+    <Button
+        android:id="@+id/btGroupNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/group_notification"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btStartActivityNotification" />
+
+    <Button
+        android:id="@+id/btOpenNotificationSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_notification_settings"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btGroupNotification" />
+
+    <Button
+        android:id="@+id/btCustomNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btOpenNotificationSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_size_1"
+        android:textAllCaps="false"
+        android:text="@string/custom_notification"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

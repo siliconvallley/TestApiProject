@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.dh.testproject.utils.NumberOfSetsConverters" />
+
+        <import type="com.dh.testproject.utils.TimerConverter" />
+
+        <variable
+            name="viewModel"
+            type="com.dh.testproject.databinding.TimerObservableViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".databinding.TwoWayActivity">
+
+        <Button
+            android:id="@+id/btDecrease"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:onClick="@{() -> viewModel.setsDecrease()}"
+            android:text="@string/minus_sign"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNumberOfSets"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:digits="0123456789"
+            android:ems="8"
+            android:enabled="@{!viewModel.timerRunning}"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:text="Sets: 1/2"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:clearTextOnFocus="@{true}"
+            app:hideKeyboardOnInputDone="@{true}"
+            app:layout_constraintStart_toEndOf="@id/btDecrease"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loseFocusWhen="@{viewModel.timerRunning}"
+            app:numberOfSets="@={NumberOfSetsConverters.setArrayToString(context,viewModel.numberOfSets)}" />
+
+
+        <Button
+            android:id="@+id/btIncrease"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:onClick="@{() -> viewModel.setsIncrease()}"
+            android:text="@string/plus_sign"
+            app:layout_constraintStart_toEndOf="@+id/etNumberOfSets"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btStop"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:onClick="@{() -> viewModel.stopButtonClicked()}"
+            android:text="@string/stop"
+            app:layout_constraintEnd_toStartOf="@+id/btPause"
+            app:layout_constraintStart_toEndOf="@id/btIncrease"
+            app:layout_constraintTop_toTopOf="@id/btIncrease" />
+
+        <!--android:checked="@{viewModel.timerRunning}"-->
+        <ToggleButton
+            android:id="@+id/btPause"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:checked="@={viewModel.timerRunning}"
+            android:focusable="true"
+            android:textOff="@string/start"
+            android:textOn="@string/pause"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btStop"
+            app:layout_constraintTop_toTopOf="@id/btStop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWorkTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@{TimerConverter.fromTenthsToSeconds(viewModel.workTimeLeft)}"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            app:animateBackground="@{viewModel.timerRunning}"
+            app:animateBackgroundStage="@{viewModel.inWorkingStage}"
+            app:layout_constraintBottom_toTopOf="@+id/btSub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btDecrease"
+            tools:text="15:55" />
+
+        <Button
+            android:id="@+id/btSub"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:onClick="@{() -> viewModel.workTimeDecrease()}"
+            android:text="@string/minus_sign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/etWorkTime"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etWorkTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:digits=",.:0123456789"
+            android:ems="6"
+            android:imeOptions="actionDone"
+            android:inputType="time"
+            android:maxLines="1"
+            android:text="@{TimerConverter.fromTenthsToSeconds(viewModel.timePerWorkSet)}"
+            android:textAlignment="center"
+            app:clearOnFocusAndDispatch="@{() -> viewModel.timePerWorkSetChanged(etWorkTime.getText())}"
+            app:hideKeyboardOnInputDone="@{true}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btAdd"
+            app:layout_constraintStart_toEndOf="@id/btSub"
+            app:loseFocusWhen="@{viewModel.timerRunning}"
+            tools:text="10:00" />
+
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:onClick="@{() -> viewModel.workTimeIncrease()}"
+            android:text="@string/plus_sign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etWorkTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
