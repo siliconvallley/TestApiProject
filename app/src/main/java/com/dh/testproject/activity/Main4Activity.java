@@ -1,4 +1,4 @@
-package com.dh.testproject;
+package com.dh.testproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.dh.testproject.R;
 import com.dh.testproject.databinding.ActivityMain4Binding;
 import com.dh.testproject.databinding.ObservableActivity;
 import com.dh.testproject.databinding.TwoWayActivity;

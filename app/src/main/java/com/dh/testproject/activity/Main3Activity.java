@@ -1,4 +1,4 @@
-package com.dh.testproject;
+package com.dh.testproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.security.crypto.EncryptedFile;
@@ -9,6 +9,8 @@ import android.os.Environment;
 import android.security.keystore.KeyGenParameterSpec;
 import android.util.Log;
 import android.view.View;
+
+import com.dh.testproject.R;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

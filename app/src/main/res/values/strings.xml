@@ -58,4 +58,6 @@
     <string name="group_notification">Group Notification</string>
     <string name="open_notification_settings">Open Notification Settings</string>
     <string name="custom_notification">Custom Notification</string>
+    <string name="permission_bt">Permission</string>
+    <string name="normal_permission">Normal Permission</string>
 </resources>

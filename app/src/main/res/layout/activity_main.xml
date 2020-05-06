@@ -50,10 +50,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/notification"
+        android:textAllCaps="false"
         android:textSize="@dimen/text_size_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btDataBind"
-        android:textAllCaps="false"/>
+        app:layout_constraintTop_toBottomOf="@id/btDataBind" />
 
+    <Button
+        android:id="@+id/btPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_bt"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btNotification" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.dh.testproject;
+package com.dh.testproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.dh.testproject.R;
 
 public class Main2Activity extends AppCompatActivity {
 

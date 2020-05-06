@@ -8,6 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.dh.testproject.activity.Main2Activity;
+import com.dh.testproject.activity.Main3Activity;
+import com.dh.testproject.activity.Main4Activity;
+import com.dh.testproject.activity.Main5Activity;
+import com.dh.testproject.activity.Main6Activity;
 import com.dh.testproject.algorithm_utils.SlidingWindowMax;
 
 import java.util.ArrayList;
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btEncrypt;
     private Button btDataBind;
     private Button btNotification;
+    private Button btPermission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btEncrypt = findViewById(R.id.btEncrypt);
         btDataBind = findViewById(R.id.btDataBind);
         btNotification = findViewById(R.id.btNotification);
+        btPermission = findViewById(R.id.btPermission);
     }
 
     private void initListener() {
@@ -48,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btEncrypt.setOnClickListener(this);
         btDataBind.setOnClickListener(this);
         btNotification.setOnClickListener(this);
+        btPermission.setOnClickListener(this);
     }
 
     public void btJudge(View view) {
@@ -168,7 +176,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btNotification:
                 // 通知测试
-                intent = new Intent(this,Main5Activity.class);
+                intent = new Intent(this, Main5Activity.class);
+                break;
+            case R.id.btPermission:
+                // 测试请求权限
+                intent = new Intent(this, Main6Activity.class);
                 break;
         }
         if (intent != null) {

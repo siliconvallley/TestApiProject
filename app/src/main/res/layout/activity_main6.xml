@@ -4,28 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Main3Activity">
+    tools:context=".activity.Main6Activity">
 
     <Button
-        android:id="@+id/btEncrypt"
+        android:id="@+id/btNormalPermission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="btEncrypt"
-        android:text="@string/encryptFile"
+        android:text="@string/normal_permission"
+        android:textAllCaps="false"
         android:textSize="@dimen/text_size_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btDecrypt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btDecrypt"
-        android:text="@string/decryptFile"
-        android:textSize="@dimen/text_size_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btEncrypt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,9 +7,8 @@ import android.os.IBinder;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.PermissionChecker;
 
-import com.dh.testproject.Main3Activity;
+import com.dh.testproject.activity.Main3Activity;
 import com.dh.testproject.R;
 
 public class TimeSensitiveNotificationService extends Service {

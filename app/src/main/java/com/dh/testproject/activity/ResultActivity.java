@@ -1,8 +1,10 @@
-package com.dh.testproject;
+package com.dh.testproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.dh.testproject.R;
 
 public class ResultActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.dh.testproject;
+package com.dh.testproject.activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -34,10 +34,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
 
+import com.dh.testproject.R;
 import com.dh.testproject.broadcastreceiver.ReplyBroadcastReceiver;
 import com.dh.testproject.service.TimeSensitiveNotificationService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
