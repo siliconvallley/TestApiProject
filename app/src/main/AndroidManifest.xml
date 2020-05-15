@@ -4,8 +4,9 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -16,7 +17,9 @@
         android:roundIcon="@mipmap/app6"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Main6Activity"></activity>
+        <activity android:name=".activity.viewpager.FakeDragActivity"></activity>
+        <activity android:name=".activity.viewpager.CardViewTabLayoutActivity" />
+        <activity android:name=".activity.viewpager.MutableCollectionFragmentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +43,21 @@
         <activity android:name=".databinding.ObservableActivity" />
         <activity android:name=".activity.Main4Activity" />
         <activity android:name=".activity.Main3Activity" />
+        <activity android:name=".activity.TestAlgorithmActivity" />
+        <activity android:name=".activity.Main6Activity" />
+        <activity android:name=".activity.Main8Activity" />
+        <activity android:name=".activity.Main7Activity" />
+        <activity android:name=".activity.Main10Activity" />
+        <activity android:name=".activity.Main9Activity" />
+        <activity android:name=".activity.viewpager.CardViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.viewpager.MutableCollectionViewActivity" />
+        <activity android:name=".activity.viewpager.CardFragmentActivity" />
 
         <provider
             android:name=".contentprovider.MyContentProvider"
@@ -53,6 +71,16 @@
         </receiver>
 
         <service android:name=".service.TimeSensitiveNotificationService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dh.testproject.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/share_filepaths" />
+        </provider>
     </application>
 
 </manifest>

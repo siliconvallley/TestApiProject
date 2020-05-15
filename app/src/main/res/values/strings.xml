@@ -60,4 +60,49 @@
     <string name="custom_notification">Custom Notification</string>
     <string name="permission_bt">Permission</string>
     <string name="normal_permission">Normal Permission</string>
+    <string name="breadth_first_search">Breadth first search</string>
+    <string name="preference">Preference</string>
+    <string-array name="preference_array">
+        <item>李白</item>
+        <item>杜甫</item>
+        <item>李贺</item>
+        <item>范仲淹</item>
+    </string-array>
+    <string-array name="preference_array_value">
+        <item>诗仙</item>
+        <item>诗圣，关心黎民的一个写实的诗人</item>
+        <item>诗鬼</item>
+        <item>词人</item>
+    </string-array>
+    <string name="share_sheet">ShareSheet</string>
+    <string name="share_text">Share Text</string>
+    <string name="share_binary_content">分享二进制内容</string>
+    <string name="share_multi_binary">分享多个二进制内容</string>
+    <string name="share_rich_text">分享富文本</string>
+    <string name="fragment">Fragment</string>
+    <string name="fragment_callback">测试回调方法</string>
+    <string name="fragment_stack">添加到回退栈</string>
+    <string name="fragment_other">我是另一个Fragment</string>
+    <string name="fragment_value">Fragment之间传递值</string>
+    <string name="fragment_child_value">子Fragment传递值给父Fragment</string>
+    <string name="viewpager2">ViewPager2</string>
+    <string name="label_orientation">Orientation:</string>
+    <string name="disable_user_input">Disable user input</string>
+    <string name="label_jump_to">Jump to:</string>
+    <string name="checkbox_smooth_scroll">Smooth</string>
+    <string name="checkbox_rotate">Rotate</string>
+    <string name="checkbox_translate">Translate</string>
+    <string name="checkbox_scale">Scale</string>
+
+    <!--测试ViewPager2-->
+    <string name="toolbox">Toolbox</string>
+    <string name="choose_a_page">Choose a page:</string>
+    <string name="use_diff_util">Use DiffUtil:</string>
+    <string name="add_new_before">Add new before</string>
+    <string name="add_new_after">Add new after</string>
+    <string name="remove_page">Remove page</string>
+    <string name="go_to_page">Go to page</string>
+    <string name="increase_count">Count++</string>
+    <string name="count_colon">Count:</string>
+    <string name="id_colon">Id:</string>
 </resources>

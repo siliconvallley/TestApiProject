@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:title="Notifications"
+        app:key="notification_category">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:summary="summary title"
+            app:defaultValue="false"
+            app:dependency="checkBox"
+            app:title="Enable message notifications" />
+
+        <CheckBoxPreference
+            app:key="checkBox"
+            app:summary="是否要去点亮屏幕"
+            app:title="开灯" />
+
+        <SeekBarPreference
+            app:key="seekBar"
+            app:seekBarIncrement="10"
+            app:showSeekBarValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Help"
+        app:key="help_category">
+
+        <Preference
+            app:key="feedback"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback"
+            android:enabled="true"
+            android:selectable="false"
+            app:fragment="com.dh.testproject.fragment.TestPreferenceFragment"/>
+
+        <EditTextPreference
+            app:key="editText"
+            app:title="EditText"
+
+            app:summary="我是EditText的Preference" />
+
+        <ListPreference
+            app:key="list"
+            app:title="List Title"
+            app:summary="单选列表"
+            app:entryValues="@array/preference_array_value"
+            app:entries="@array/preference_array"/>
+
+        <MultiSelectListPreference
+            app:key="multiList"
+            app:title="MultiList"
+            app:summary="多选列表"
+            app:entryValues="@array/preference_array_value"
+            app:entries="@array/preference_array"/>
+
+        <Preference
+            app:key="testIntent"
+            app:title="测试意图"
+            app:summary="必须测试意图">
+
+            <intent
+                android:targetPackage="com.dh.testproject"
+                android:targetClass="com.dh.testproject.activity.ResultActivity">
+
+                <extra
+                    android:name="testKey"
+                    android:value="testValue"/>
+
+            </intent>
+
+        </Preference>
+
+        <Preference
+            app:key="testWebpage"
+            app:title="View webpage"
+            app:summary="打开网页">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.google.com" />
+
+        </Preference>
+    </PreferenceCategory>
+
+    <Preference
+        app:key="fold"
+        app:title="折叠"
+        app:summary="展开被折叠的内容"
+        app:icon="@mipmap/arrow"/>
+
+    <PreferenceCategory
+        app:key="foldContent"
+        app:title="折叠的内容"
+        app:isPreferenceVisible="false">
+
+        <Preference
+            app:title="李白"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="杜甫"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="李贺"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="苏东坡"
+            app:summary="宋代词人"/>
+
+        <Preference
+            app:title="韩愈"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="石越"
+            app:summary="宋代思想集大成者"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:key="foldContent1"
+        app:title="折叠的内容"
+        app:initialExpandedChildrenCount="2">
+
+        <Preference
+            app:title="李白"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="杜甫"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="李贺"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="苏东坡"
+            app:summary="宋代词人"/>
+
+        <Preference
+            app:title="韩愈"
+            app:summary="唐代诗人"/>
+
+        <Preference
+            app:title="石越"
+            app:summary="宋代思想集大成者"/>
+
+        <PreferenceCategory
+            app:key="innerCategory"
+            app:title="内部的category">
+
+            <Preference
+                app:title="包拯"
+                app:summary="宋代断案牛人"/>
+
+            <Preference
+                app:title="狄仁杰"
+                app:summary="唐朝断案大家"/>
+
+        </PreferenceCategory>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

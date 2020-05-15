@@ -10,7 +10,7 @@
         android:id="@+id/btJudge"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Test"
         android:textAllCaps="false"
         android:textSize="@dimen/text_size_1"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -66,4 +66,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btNotification" />
+
+    <Button
+        android:id="@+id/btPreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/preference"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btPermission" />
+
+    <Button
+        android:id="@+id/btShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_sheet"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btPreference" />
+
+
+    <Button
+        android:id="@+id/btFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btShare" />
+
+    <Button
+        android:id="@+id/btViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpager2"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

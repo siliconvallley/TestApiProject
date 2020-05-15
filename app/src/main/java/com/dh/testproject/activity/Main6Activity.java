@@ -24,7 +24,8 @@ public class Main6Activity extends AppCompatActivity implements View.OnClickList
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_CONTACTS,
-            Manifest.permission.WRITE_CONTACTS
+            Manifest.permission.WRITE_CONTACTS,
+            Manifest.permission.CAMERA
     };
     private String deniedPermission;
     private static final int REQ_PERMISSION = 100;
@@ -77,11 +78,11 @@ public class Main6Activity extends AppCompatActivity implements View.OnClickList
                 // 跳转到权限设置页面
                 Toast.makeText(this, "这是必要的权限，您您打开应用设置界面，开启权限", Toast.LENGTH_SHORT).show();
                 ActivityCompat.requestPermissions(this, deniedArr, REQ_PERMISSION);
-                Log.e(TAG,"需要解释，然后申请权限");
+                Log.e(TAG, "需要解释，然后申请权限");
             } else {
                 // 用户拒绝，不需要解释，直接继续申请权限
                 ActivityCompat.requestPermissions(this, deniedArr, REQ_PERMISSION);
-                Log.e(TAG,"需要申请权限");
+                Log.e(TAG, "需要申请权限");
             }
         } else {
             Log.e(TAG, "权限全部同意");
@@ -132,9 +133,11 @@ public class Main6Activity extends AppCompatActivity implements View.OnClickList
                 // 判断是否用户已经拒绝，并且勾选了不在请求
                 boolean permissionRationale = ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[0]);
                 if (permissionRationale) {
-                    //requestNormalPermission(NORMAL_PERMISSIONS);
-                }else {
+                    requestNormalPermission(NORMAL_PERMISSIONS);
+                    Log.e(TAG, "需要再次请求权限");
+                } else {
                     // 用户拒绝了会返回false，当用户勾选了不在询问就会一致返回false，请求权限的弹窗就再也不能弹出来
+                    Log.e(TAG, "请到设置中打开权限");
                 }
             }
             return;

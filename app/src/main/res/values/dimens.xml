@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_size_1">20sp</dimen>
+
+    <dimen name="spacer_large">20dp</dimen>
+    <dimen name="spacer_small">5dp</dimen>
+    <dimen name="halfPageMargin">16dp</dimen><!-- half of distance between pages -->
+    <dimen name="peekOffset">50dp</dimen><!-- how much of adjacent pages is shown -->
 </resources>

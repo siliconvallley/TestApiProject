@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--content://com.example.myapp.fileprovider/myImages/default_image.jpg-->
+    <!--name属性会自动拼接在uri的authorities之后-->
+    <files-path
+        name="myImages"
+        path="images/" />
+</paths>

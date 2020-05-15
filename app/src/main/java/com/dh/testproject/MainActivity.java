@@ -8,11 +8,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.dh.testproject.activity.Main10Activity;
 import com.dh.testproject.activity.Main2Activity;
 import com.dh.testproject.activity.Main3Activity;
 import com.dh.testproject.activity.Main4Activity;
 import com.dh.testproject.activity.Main5Activity;
 import com.dh.testproject.activity.Main6Activity;
+import com.dh.testproject.activity.Main7Activity;
+import com.dh.testproject.activity.Main8Activity;
+import com.dh.testproject.activity.Main9Activity;
+import com.dh.testproject.activity.TestAlgorithmActivity;
 import com.dh.testproject.algorithm_utils.SlidingWindowMax;
 
 import java.util.ArrayList;
@@ -30,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btDataBind;
     private Button btNotification;
     private Button btPermission;
+    private Button btPreference;
+    private Button btShare;
+    private Button btFragment;
+    private Button btViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btDataBind = findViewById(R.id.btDataBind);
         btNotification = findViewById(R.id.btNotification);
         btPermission = findViewById(R.id.btPermission);
+        btPreference = findViewById(R.id.btPreference);
+        btShare = findViewById(R.id.btShare);
+        btFragment = findViewById(R.id.btFragment);
+        btViewPager = findViewById(R.id.btViewPager);
     }
 
     private void initListener() {
@@ -56,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btDataBind.setOnClickListener(this);
         btNotification.setOnClickListener(this);
         btPermission.setOnClickListener(this);
+        btPreference.setOnClickListener(this);
+        btShare.setOnClickListener(this);
+        btFragment.setOnClickListener(this);
+        btViewPager.setOnClickListener(this);
     }
 
     public void btJudge(View view) {
@@ -91,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }*/
 
         //int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
-        int[] nums = {1, 3, 1, 2, 0, 5};
+        /*int[] nums = {1, 3, 1, 2, 0, 5};
         SlidingWindowMax slidingWindowMax = new SlidingWindowMax();
         int[] slidingWindow1 = slidingWindowMax.maxSlidingWindow1(nums, 3);
         for (int i : slidingWindow1) {
@@ -101,9 +118,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Queue<Integer> integers = slidingWindowMax.maxSlidingWindow(nums, 3);
         while (!integers.isEmpty()) {
             Log.e(TAG, "滑动窗口每次滑动的最大数： " + integers.poll());
-        }
+        }*/
 
         //new StatFs("/data").getBlockSizeLong();
+
+        startActivity(new Intent(this, TestAlgorithmActivity.class));
     }
 
     /**
@@ -181,6 +200,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btPermission:
                 // 测试请求权限
                 intent = new Intent(this, Main6Activity.class);
+                break;
+            case R.id.btPreference:
+                intent = new Intent(this, Main7Activity.class);
+                break;
+            case R.id.btShare:
+                intent = new Intent(this, Main8Activity.class);
+                break;
+            case R.id.btFragment:
+                intent = new Intent(this, Main9Activity.class);
+                break;
+            case R.id.btViewPager:
+                intent = new Intent(this, Main10Activity.class);
                 break;
         }
         if (intent != null) {
